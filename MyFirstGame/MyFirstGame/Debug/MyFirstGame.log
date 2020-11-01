@@ -1,0 +1,23 @@
+﻿  Game.cpp
+  main.cpp
+  MainMenuState.cpp
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(26,78): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(26,57): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+  Создание кода...
+  MyFirstGame.vcxproj -> C:\Users\Данил\source\game\MyFirstGame\Debug\MyFirstGame.exe
