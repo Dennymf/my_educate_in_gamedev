@@ -1,5 +1,13 @@
 #include "MainMenuState.h"
 
+void MainMenuState::initFonts()
+{
+	if (!this->font.loadFromFile("Fonts/Title_Font.xnb"))
+	{
+		throw("ERROR::MAINMENUSTATE::COULD NOT LOAD FONT");
+	}
+}
+
 void MainMenuState::initKeybinds()
 {
 	std::fstream file_keys("Config/gamestate_keybinds.ini");
@@ -21,6 +29,7 @@ void MainMenuState::initKeybinds()
 MainMenuState::MainMenuState(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys)
 	: State(window, supportedKeys)
 {
+	this->initFonts();
 	this->initKeybinds();
 
 	this->background.setSize(sf::Vector2f(window->getSize().x, window->getSize().y));
@@ -45,6 +54,7 @@ void MainMenuState::updateInput(const float& dt)
 
 void MainMenuState::update(const float& dt)
 {
+	this->updateMousePosition();
 	this->updateInput(dt);
 }
 
