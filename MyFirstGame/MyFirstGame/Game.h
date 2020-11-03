@@ -11,6 +11,9 @@ private:
 
 	sf::RenderWindow *window;
 	sf::Event sf_event;
+	std::vector<sf::VideoMode> viedoModes;
+	sf::ContextSettings windowSettings;
+	bool fullscreen;
 
 	sf::Clock dt_clock;
 	float dt;

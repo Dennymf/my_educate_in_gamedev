@@ -1,2 +1,14 @@
-﻿  State.cpp
+﻿  MainMenuState.cpp
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(55,82): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(55,75): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(55,61): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(55,46): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(57,95): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(57,88): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(57,76): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(57,48): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(59,96): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(59,89): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(59,73): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
+C:\Users\Данил\source\game\MyFirstGame\MyFirstGame\MainMenuState.cpp(59,45): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
   MyFirstGame.vcxproj -> C:\Users\Данил\source\game\MyFirstGame\Debug\MyFirstGame.exe
