@@ -52,12 +52,22 @@ void MainMenuState::initButtons()
 	unsigned distance = this->window->getSize().y / 10;
 	unsigned width = 150;
 	unsigned heigth = 50;
-	this->buttons["GAME_STATE"] =  new Button(x - width / 2, y - heigth / 2, width, heigth, &this->font, "New Game",
-		sf::Color(70, 70, 70, 200), sf::Color(150, 150, 150, 255), sf::Color(20, 20, 20, 200));
-	this->buttons["SETTING_STATE"] = new Button(x - width / 2, y - heigth / 2 + distance, width, heigth, &this->font, "Settings",
-		sf::Color(70, 70, 70, 200), sf::Color(150, 150, 150, 255), sf::Color(20, 20, 20, 200));
-	this->buttons["EXIT_STATE"] = new Button(x - width / 2, y - heigth / 2 + distance * 2, width, heigth, &this->font, "Quit",
-		sf::Color(100, 100, 100, 200), sf::Color(150, 150, 150, 255), sf::Color(20, 20, 20, 200));
+	this->buttons["GAME_STATE"] =  new Button(x - width / 2, y - heigth / 2, width, heigth,
+		&this->font, "New Game", 50,
+		sf::Color(250, 250, 250, 200), sf::Color(130, 130, 130, 255), sf::Color(80, 80, 80, 200),
+		sf::Color(70, 70, 70, 0), sf::Color(150, 150, 150, 0), sf::Color(20, 20, 20, 0));
+	this->buttons["SETTING_STATE"] = new Button(x - width / 2, y - heigth / 2 + distance, width, heigth,
+		&this->font, "Settings", 50,
+		sf::Color(250, 250, 250, 200), sf::Color(130, 130, 130, 255), sf::Color(80, 80, 80, 200),
+		sf::Color(70, 70, 70, 0), sf::Color(150, 150, 150, 0), sf::Color(20, 20, 20, 0));
+	this->buttons["EDITOR_STATE"] = new Button(x - width / 2, y - heigth / 2 + distance * 2, width, heigth,
+		&this->font, "Editor", 50,
+		sf::Color(250, 250, 250, 200), sf::Color(130, 130, 130, 255), sf::Color(80, 80, 80, 200),
+		sf::Color(70, 70, 70, 0), sf::Color(150, 150, 150, 0), sf::Color(20, 20, 20, 0));
+	this->buttons["EXIT_STATE"] = new Button(x - width / 2, y - heigth / 2 + distance * 3, width, heigth,
+		&this->font, "Quit", 50,
+		sf::Color(250, 250, 250, 200), sf::Color(130, 130, 130, 255), sf::Color(80, 80, 80, 200),
+		sf::Color(100, 100, 100, 0), sf::Color(150, 150, 150, 0), sf::Color(20, 20, 20, 0));
 }
 
 MainMenuState::MainMenuState(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::stack<State*>* states)

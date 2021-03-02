@@ -24,14 +24,19 @@ private:
 	sf::Font* font;
 	sf::Text text;
 
+	sf::Color idleTextColor;
+	sf::Color hoverTextColor;
+	sf::Color activeTextColor;
+
 	sf::Color idleColor;
 	sf::Color hoverColor;
 	sf::Color activeColor;
 
 public:
 	Button(float x, float y, float width, float height,
-			sf::Font* font, std::string text,
-			sf::Color idleColor, sf::Color hoverColor, sf::Color activeColor);
+		sf::Font* font, std::string text, unsigned characher_size,
+		sf::Color idle_text_color, sf::Color hover_text_color, sf::Color active_text_color,
+		sf::Color idle_color, sf::Color hover_color, sf::Color active_color);
 	~Button();
 
 	const bool isPressed() const;
