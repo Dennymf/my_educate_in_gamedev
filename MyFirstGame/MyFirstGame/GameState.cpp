@@ -84,5 +84,5 @@ void GameState::render(sf::RenderTarget* target )
 	{
 		target = this->window;
 	}
-	this->player->render(target);
+	this->player->render(*target);
 }

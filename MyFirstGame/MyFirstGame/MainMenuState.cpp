@@ -106,6 +106,12 @@ void MainMenuState::updateButtons()
 		this->states->push(new GameState(this->window, this->supportedKeys, this->states));
 	}
 	
+	//Editor
+	if (this->buttons["EDITOR_STATE"]->isPressed())
+	{
+		this->states->push(new EditorState(this->window, this->supportedKeys, this->states));
+	}
+
 	//Quit
 	if (this->buttons["EXIT_STATE"]->isPressed())
 	{
@@ -128,7 +134,7 @@ void MainMenuState::render(sf::RenderTarget* target)
 	}
 
 	target->draw(this->background);
-	this->renderButtons(target);
+	this->renderButtons(*target);
 
 	//Remove later
 	/*sf::Text mouseText;
@@ -142,7 +148,7 @@ void MainMenuState::render(sf::RenderTarget* target)
 	target->draw(mouseText);*/
 }
 
-void MainMenuState::renderButtons(sf::RenderTarget* target)
+void MainMenuState::renderButtons(sf::RenderTarget& target)
 {
 	for (auto& it : this->buttons)
 	{
