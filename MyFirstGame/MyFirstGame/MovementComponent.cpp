@@ -11,6 +11,11 @@ MovementComponent::~MovementComponent()
 {
 }
 
+const float MovementComponent::getMaxVelocity() const
+{
+	return this->maxVelocity;
+}
+
 const sf::Vector2f& MovementComponent::getVelocity() const
 {
 	return this->velocity;
@@ -47,6 +52,7 @@ const bool MovementComponent::getState(const short unsigned state) const
 
 	return false;
 }
+
 
 void MovementComponent::move(const float dir_x, const float dir_y, const float& dt)
 {

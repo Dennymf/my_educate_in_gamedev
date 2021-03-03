@@ -16,7 +16,8 @@
 #include "SFML\Audio.hpp"
 #include "SFML\Network.hpp"
 
-enum movement_status { IDLE = 0, MOVING, MOVING_LEFT, MOVING_RIGHT, MOVING_UP, MOVING_DOWN};
+enum movement_status { IDLE = 0, MOVING,
+	MOVING_LEFT, MOVING_RIGHT, MOVING_UP, MOVING_DOWN};
 
 class MovementComponent
 {
@@ -36,6 +37,7 @@ public:
 		float acceleration, float deceleration);
 	virtual ~MovementComponent();
 	//Accessors
+	const float getMaxVelocity() const;
 	const sf::Vector2f& getVelocity() const;
 
 	//Function
