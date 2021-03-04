@@ -17,9 +17,12 @@ Button::Button(float x, float y, float width, float height,
 	this->text.setString(text);
 	this->text.setFillColor(idle_text_color);
 	this->text.setCharacterSize(characher_size);
+	std::string temp = this->text.getString();
+	float xx = this->text.getGlobalBounds().width;
+	std::cout << xx << std::endl;
 	this->text.setPosition(
-		this->shape.getPosition().x + (this->shape.getGlobalBounds().width / 2.f) - this->text.getGlobalBounds().width / 2.f,
-		this->shape.getPosition().y + (this->shape.getGlobalBounds().height / 2.f) - this->text.getGlobalBounds().height / 2.f
+		this->shape.getPosition().x + this->shape.getSize().x / 2.f - this->text.getGlobalBounds().width / 2.f,
+		this->shape.getPosition().y + this->shape.getGlobalBounds().height / 2.f - this->text.getGlobalBounds().height / 2.f
 	);
 
 	this->idleTextColor = idle_text_color;
@@ -27,6 +30,8 @@ Button::Button(float x, float y, float width, float height,
 	this->activeTextColor = active_text_color;
 	this->text.setOutlineThickness(3.f);
 	this->text.setOutlineColor(sf::Color(20, 20, 20, 255));
+	this->shape.setOutlineThickness(2.f);
+	this->shape.setOutlineColor(sf::Color(200, 200, 200, 200));
 
 	this->idleColor = idle_color;
 	this->hoverColor = hover_color;
@@ -47,7 +52,7 @@ const bool Button::isPressed() const
 	return false;
 }
 
-void Button::update(const sf::Vector2f mousePos)
+void Button::update(const sf::Vector2f& mousePos)
 {
 	this->buttonState = BTN_IDLE;
 

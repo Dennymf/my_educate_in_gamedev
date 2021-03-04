@@ -1,12 +1,10 @@
-#ifndef MAIMENUSTATE_H
-#define MAIMENUSTATE_H
+#ifndef SETTINGSTATE_H
+#define SETTINGSTATE_H
 
-#include "GameState.h"
-#include "EditorState.h"
-#include "SettingState.h"
+#include "State.h"
 #include "Button.h"
 
-class MainMenuState :
+class SettingState :
     public State
 {
 private:
@@ -25,16 +23,14 @@ private:
     void initButtons();
 
 public:
-    MainMenuState(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::stack<State*>* states);
-    virtual ~MainMenuState();
+    SettingState(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::stack<State*>* states);
+    virtual ~SettingState();
 
-    //Function
     void updateInput(const float& dt);
     void updateButtons();
     void update(const float& dt);
     void render(sf::RenderTarget* target = NULL);
     void renderButtons(sf::RenderTarget& target);
-
 };
 
 #endif
