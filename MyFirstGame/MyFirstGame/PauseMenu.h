@@ -10,7 +10,7 @@
 #include <stack>
 #include <map>
 
-#include "Button.h"
+#include "Gui.h"
 
 #include "SFML\Graphics.hpp"
 #include "SFML\Window.hpp"
@@ -27,14 +27,14 @@ private:
 	sf::RectangleShape background;
 	sf::RectangleShape container;
 
-	std::map<std::string, Button*> buttons;
+	std::map<std::string, gui::Button*> buttons;
 
 public:
 	PauseMenu(sf::RenderWindow& window, sf::Font& font);
 	virtual ~PauseMenu();
 
 	//Accessor
-	std::map<std::string, Button*>& getAllButtons();
+	std::map<std::string, gui::Button*>& getAllButtons();
 
 	//Func
 	const bool& isButtonPressed(const std::string key);

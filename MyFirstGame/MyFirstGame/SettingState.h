@@ -2,7 +2,7 @@
 #define SETTINGSTATE_H
 
 #include "State.h"
-#include "Button.h"
+#include "Gui.h"
 
 class SettingState :
     public State
@@ -13,24 +13,25 @@ private:
     sf::RectangleShape background;
     sf::Font font;
 
-    std::map<std::string, Button*>  buttons;
+    std::map<std::string, gui::Button*>  buttons;
+    std::map<std::string, gui::DropDownList*>  dropDownLists;
 
     //Functions
     void initVariables();
     void initBackground();
     void initFonts();
     void initKeybinds();
-    void initButtons();
+    void initGui();
 
 public:
     SettingState(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::stack<State*>* states);
     virtual ~SettingState();
 
     void updateInput(const float& dt);
-    void updateButtons();
+    void updateGui(const float& dt);
     void update(const float& dt);
     void render(sf::RenderTarget* target = NULL);
-    void renderButtons(sf::RenderTarget& target);
+    void renderGui(sf::RenderTarget& target);
 };
 
 #endif

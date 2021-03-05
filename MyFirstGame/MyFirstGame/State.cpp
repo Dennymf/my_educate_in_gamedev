@@ -58,6 +58,6 @@ void State::updateKeytime(const float& dt)
 {
 	if (this->keytime < this->keytimeMax)
 	{
-		this->keytime += 100.f * dt;
+		this->keytime += 50.f * dt;
 	}
 }
