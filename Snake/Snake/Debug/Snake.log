@@ -1,0 +1,6 @@
+﻿  Game.cpp
+C:\Educate\my_educate_in_gamedev\Snake\Snake\Game.h(24,14): warning C4305: инициализация: усечение из "double" в "float"
+C:\Educate\my_educate_in_gamedev\Snake\Snake\Game.cpp(108,20): warning C4305: =: усечение из "double" в "float"
+C:\Educate\my_educate_in_gamedev\Snake\Snake\Game.cpp(116,41): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
+C:\Educate\my_educate_in_gamedev\Snake\Snake\Game.cpp(149,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Snake.vcxproj -> C:\Educate\my_educate_in_gamedev\Snake\Debug\Snake.exe

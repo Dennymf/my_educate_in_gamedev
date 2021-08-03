@@ -3,6 +3,7 @@
 
 #include "State.h"
 #include "PauseMenu.h"
+
 class GameState :
     public State
 {
